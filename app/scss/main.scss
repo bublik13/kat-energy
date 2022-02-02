@@ -5,4 +5,10 @@
 @import 'global';
 
 //подключаем БЭМ блоки
-@import 'blocks/header';
+@import "blocks/body";
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/logo";
+@import "blocks/logo-name";
+@import "blocks/nav";
+@import "blocks/burger";

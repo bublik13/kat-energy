@@ -1,0 +1,11 @@
+.logo-name__img {
+  width: 101px;
+  height: 18px;
+  display: block;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    opacity: 0.6;
+  }
+}

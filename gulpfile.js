@@ -133,6 +133,10 @@ function serve() {
   watch(sourceFolder + '/fonts/**/*', series(fonts)).on('change', sync.reload)
 };
 
+function favicon() {
+  return src(['./favicon.png'])
+      .pipe(dest(buildFolder))
+};
 
 exports.build = series(clear, scss, js, img, sprite, fonts, html);
 exports.watch = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
