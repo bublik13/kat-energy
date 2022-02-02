@@ -2,4 +2,20 @@
 $body-bg: #ff55;
 
 //fonts
-$basic-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+$basic-family: "Roboto", "Arial", "Helvetica", "Oswald", sans-serif;
+
+//container
+$container-min-width: 320px;
+$container-max-width: 1200px;
+
+//background-color
+$header-color-white: #ffffff;
+
+//color
+$header-color-black: #000000;
+
+//media
+$xs: 350px;
+$sm: 556px;
+$md: 768px;
+$lg: 1200px;
