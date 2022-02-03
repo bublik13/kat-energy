@@ -1,0 +1,4 @@
+.subtitle {
+  @include font(14px, 14px, 400, "Oswald");
+  color: $subtitle-color-white;
+}

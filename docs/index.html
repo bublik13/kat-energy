@@ -1,65 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kat-energy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/main.css?t=1643833538457">
-    <link type="image/png" sizes="32x32" rel="icon" href="../img/favicon.png">
-</head>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kat-energy</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet"> 
+      <link rel="stylesheet" href="css/main.css?t=1643916737566">
+      <link type="image/png" sizes="32x32" rel="icon" href="../img/favicon.png">
+  </head>
 
-<body class="body js-body">
+  <body class="body js-body">
+<picture><source srcset="img/mobile.avif" type="image/avif"><source srcset="img/mobile.webp" type="image/webp"><img class="pp" src="img/mobile.jpg" alt=""></picture>
+    <style>
+      .pp{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 999;
+        transform: translateX(-50%);
+        opacity: .6;
+        pointer-events: none;
+      }
+    </style>
     <header class="header">
-        <div class="header__top">
-          <div class="header__container container">
-            <a href="#" class="header__logo logo">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="img/header/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
-                <img width="102" height="84" src="img/header/logo-mobile.svg" alt="logo" class="logo__img"/>
-              </picture> 
-            </a>
-            <a href="#" class="header__logo-name logo-name">
-              <img width="102" height="84" src="img/header/logo-name-mobile.svg" alt="logo" class="logo-name__img"/>
-            </a>
-            <nav class="nav header__nav js-nav nav--active">
-              <ul class="nav__list nav__list--column">
-                <li class="nav__item">
-                  <a href="#" class="nav__link nav__link--active">ГЛАВНАЯ</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">КАТАЛОГ ПРОДУКЦИИ</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">ПОДБОР ПРОГРАММЫ</a>
-                </li>
-              </ul>
-            </nav>
-            <button type="button" aria-label="close" class="burger header__burger js-burger">
-              <span class="burger__line"></span>
-              <span class="burger__line"></span>
-              <span class="burger__line"></span>
-            </button>
-          </div>
+      <div class="header__top">
+        <div class="header__container container">
+          <a href="#" class="header__logo logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/header/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
+              <img width="102" height="84" src="img/header/logo-mobile.svg" alt="logo" class="logo__img"/>
+            </picture> 
+          </a>
+          <a href="#" class="header__logo-name logo-name">
+            <img width="102" height="84" src="img/header/logo-name-mobile.svg" alt="logo" class="logo-name__img"/>
+          </a>
+          <nav class="nav header__nav js-nav nav--active">
+            <ul class="nav__list nav__list--column">
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--active">ГЛАВНАЯ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">КАТАЛОГ ПРОДУКЦИИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">ПОДБОР ПРОГРАММЫ</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" aria-label="close" class="burger header__burger js-burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
         </div>
-      </header>
+      </div>
+      <div class="header__center">
+        <div class="header__container-center container">
+          <h1 class="header__title title">
+            Функциональное питание для котов
+          </h1>
+          <p class="header__subtitle subtitle">
+            ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!
+          </p>
+          <picture class="header__back">
+            <source media="(min-width: 1200px)" srcset="img/header/eat-desktop-1x.png, img/header/eat-desktop-2x.webp 2x">
+            <source media="(min-width: 768px)"  srcset="img/header/eat-tablet-1x.png, img/header/eat-tablet-2x.webp 2x">
+            <img width="280" height="270" src="img/header/eat-mobile-2x.webp" alt="eat" class="header__img"/>
+          </picture> 
+          <a class="header__button button button--width" href="#">ПОДОБРАТЬ ПРОГРАММУ</a>
+        </div>
+      </div>
+    </header>
 
     <!-- подключаем js -->
     <script>
-        const body = document.querySelector('.js-body');
-        const nav = document.querySelector('.js-nav');
-        const burger = document.querySelector('.js-burger');
+      const body = document.querySelector('.js-body');
+      const nav = document.querySelector('.js-nav');
+      const burger = document.querySelector('.js-burger');
 
-        burger.addEventListener('click', ()=>{  
-          burger.classList.toggle('burger--active');
-          nav.classList.toggle('header__nav--active');
-          body.classList.toggle('body--lock');
-        });
-      </script>
-</body>
+      burger.addEventListener('click', ()=>{  
+        burger.classList.toggle('burger--active');
+        nav.classList.toggle('header__nav--active');
+        body.classList.toggle('body--lock');
+      });
+    </script>
+  </body>
 
 </html>

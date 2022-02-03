@@ -1,0 +1,4 @@
+.title {
+  @include font(36px, 36px, 400, "Oswald");
+  color: $title-color-white;
+}
