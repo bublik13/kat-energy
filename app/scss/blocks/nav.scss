@@ -84,5 +84,6 @@
   }
   @include media($lg) {
     background-color: $nav-line-white;
+    width: 70px;
   }
 }

@@ -13,7 +13,7 @@
   </head>
 
   <body class="body js-body">
-    <img class="pp" src="img/desktop.jpg" alt="">
+    <!-- <img class="pp" src="img/desktop.jpg" alt="">
     <style>
       .pp{
         position: absolute;
@@ -24,7 +24,7 @@
         opacity: .6;
         pointer-events: none;
       }
-    </style>
+    </style> -->
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
@@ -36,7 +36,10 @@
             </picture> 
           </a>
           <a href="#" class="header__logo-name logo-name">
-            <img width="102" height="84" src="img/header/logo-name-mobile.svg" alt="logo" class="logo-name__img"/>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/header/logo-name-tablet.svg">
+              <img width="102" height="84" src="img/header/logo-name-mobile.svg" alt="logo" class="logo-name__img"/>
+            </picture> 
           </a>
           <nav class="nav header__nav js-nav nav--active">
             <ul class="nav__list nav__list--column">
@@ -67,8 +70,8 @@
             ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!
           </p>
           <picture class="header__back">
-            <source media="(min-width: 1200px)" srcset="img/header/eat-desktop-1x.jpg, img/header/eat-desktop-2x.webp 2x">
-            <source media="(min-width: 768px)"  srcset="img/header/eat-tablet-1x.jpg, img/header/eat-tablet-2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/header/eat-desktop-1x.png, img/header/eat-desktop-2x.webp 2x">
+            <source media="(min-width: 768px)"  srcset="img/header/eat-tablet-1x.png, img/header/eat-tablet-2x.webp 2x">
             <img width="280" height="270" src="img/header/eat-mobile-2x.webp" alt="eat" class="header__img"/>
           </picture> 
           <a class="header__button button button--width" href="#">ПОДОБРАТЬ ПРОГРАММУ</a>
