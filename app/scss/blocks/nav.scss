@@ -14,19 +14,14 @@
 }
 .nav__item {
   position: relative;
-  padding: 20px 10px;
   text-align: center;
   list-style-type: none;
   border-top: 1px solid $nav-border;
   z-index: 2;
   @include media($md) {
-    padding: 16px 12px 15px 10px;
     box-shadow: none;
     width: auto;
     border-top: 1px solid transparent;
-  }
-  @include media($lg) {
-    padding:  20px 0 10px ;
   }
 }
 .nav__item:last-child {
@@ -45,13 +40,17 @@
 }
 .nav__link {
   color: $nav-color-black;
-  @include font(20px, 20px, 500, "Oswald");
+  @include font(20px, 20px, 500, $second-family);
+  display: block;
+  padding: 20px 10px;
   @include media($md) {
-    @include font(18px, 24px, 400, "Oswald");
+    padding: 16px 12px 15px 10px;
+    @include font(18px, 24px, 400, $second-family);
   }
   @include media($lg) {
+    padding: 20px 0 10px;
     color: $nav-color-white;
-    @include font(20px, 30px, 400, "Oswald");
+    @include font(20px, 30px, 400, $second-family);
   }
   &:hover {
     color: $nav-color-hover;
@@ -74,7 +73,7 @@
     content: " ";
     position: absolute;
     left: 50%;
-    top: 34px;
+    top: 42px;
     right: 0;
     height: 2px;
     background-color: $nav-line-green;
@@ -85,5 +84,6 @@
   @include media($lg) {
     background-color: $nav-line-white;
     width: 70px;
+    top: 52px;
   }
 }

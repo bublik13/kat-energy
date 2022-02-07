@@ -39,10 +39,6 @@
     position: relative;
     display: block;
   }
-  @include media($lg) {
-    padding-left: auto;
-    padding-right: auto;
-  }
 }
 .header__logo {
   z-index: 1;
