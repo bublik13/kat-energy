@@ -10,6 +10,11 @@
   padding: 10px 10px 12px 10px;
   width: 280px;
   text-align: center;
+  @include media($md) {
+    @include font(20px, 20px, 400, "Oswald");
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
   &:hover {
     background-color: $button-bg-opacity;
   }
@@ -21,4 +26,7 @@
   &._active {
     opacity: 1;
   }
+}
+.button--width{
+  max-width: 244px;
 }

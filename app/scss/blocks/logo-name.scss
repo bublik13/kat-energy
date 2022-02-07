@@ -1,7 +1,11 @@
 .logo-name__img {
   width: 101px;
-  height: 18px;
+  height: 19px;
   display: block;
+  @include media($lg) {
+    width: 116px;
+    height: 22px;
+  }
   &:hover {
     opacity: 0.8;
   }

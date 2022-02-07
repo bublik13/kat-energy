@@ -1,4 +1,8 @@
 .subtitle {
   @include font(14px, 14px, 400, "Oswald");
   color: $subtitle-color-white;
+  @include media($md) {
+    @include font(20px, 20px, 400, "Oswald");
+    color: $header-color-black;
+   }
 }

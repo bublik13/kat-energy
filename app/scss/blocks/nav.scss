@@ -9,7 +9,7 @@
   width: 100%;
   @include media($md) {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 }
 .nav__item {
@@ -18,11 +18,15 @@
   text-align: center;
   list-style-type: none;
   border-top: 1px solid $nav-border;
+  z-index: 2;
   @include media($md) {
-    padding: 15px 10px 5px 10px;
+    padding: 16px 12px 15px 10px;
     box-shadow: none;
-    width: 20%;
+    width: auto;
     border-top: 1px solid transparent;
+  }
+  @include media($lg) {
+    padding:  20px 0 10px ;
   }
 }
 .nav__item:last-child {
@@ -31,28 +35,54 @@
     border-bottom: 1px solid transparent;
   }
 }
+.nav__item:not(:last-child) {
+  @include media($md) {
+    margin-right: 13px;
+  }
+  @include media($lg) {
+    margin-right: 35px;
+  }
+}
 .nav__link {
   color: $nav-color-black;
   @include font(20px, 20px, 500, "Oswald");
+  @include media($md) {
+    @include font(18px, 24px, 400, "Oswald");
+  }
+  @include media($lg) {
+    color: $nav-color-white;
+    @include font(20px, 30px, 400, "Oswald");
+  }
   &:hover {
     color: $nav-color-hover;
+    @include media($lg) {
+      color: $nav-color-hover-white;
+    }
   }
   &:focus {
     color: $nav-color-focus;
+    @include media($lg) {
+      color: $nav-color-focus-white;
+    }
   }
 }
 .nav__link--active {
   position: relative;
 }
 .nav__link--active::after {
-  content: " ";
-  position: absolute;
-  left: 50%;
-  top: 27px;
-  right: 0;
-  height: 2px;
-  background-color: #68b738;
-  width: 90px;
-  transform: translateX(-50%);
-  opacity: 1;
+  @include media($md) {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    right: 0;
+    height: 2px;
+    background-color: $nav-line-green;
+    width: 63px;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  @include media($lg) {
+    background-color: $nav-line-white;
+  }
 }

@@ -2,6 +2,14 @@
   width: 34px;
   height: 38px;
   display: block;
+  @include media($md) {
+    width: 60px;
+    height: 52px;
+  }
+  @include media($lg) {
+    width: 80px;
+    height: 66px;
+  }
   &:hover {
     opacity: 0.8;
   }

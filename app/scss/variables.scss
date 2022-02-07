@@ -3,7 +3,7 @@ $basic-family: "Roboto", "Arial", "Helvetica", "Oswald", sans-serif;
 
 //container
 $container-min-width: 320px;
-$container-max-width: 1200px;
+$container-max-width: 1440px;
 
 //background-color
 $body-bg: #ffffff;
@@ -13,17 +13,23 @@ $nav-border: #e6e6e6;
 $button-bg-green: #68b738;
 $button-bg-opacity: #5eaa2f;
 
+//line
+$nav-line-green: #68b738;
+$nav-line-white:#ffffff;
+
 //color
 $brand-color: #000000;
 $header-color-black: #000000;
 $title-color-white: #ffffff;
 $subtitle-color-white: #ffffff;
 $button-color-white: #ffffff;
-$button-color-opacity: rgba(255, 255, 255, .3);
+$button-color-opacity: rgba(255, 255, 255, 0.3);
 $nav-color-black: #000000;
 $nav-color-hover: rgba(0, 0, 0, 0.6);
 $nav-color-focus: rgba(0, 0, 0, 0.3);
-
+$nav-color-hover-white: rgba(255, 255, 255, 0.6);
+$nav-color-focus-white: rgba(255, 255, 255, 0.3);
+$nav-color-white: #ffffff;
 
 //media
 $xs: 350px;
