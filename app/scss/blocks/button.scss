@@ -6,14 +6,15 @@
   transition: ease-out 0.2s;
   color: $button-color-white;
   background-color: $button-bg-green;
-  @include font(14px, 18px, 400, "Oswald");
-  padding: 10px 10px 12px 10px;
-  width: 280px;
+  width: 100%;
+  @include font(14px, 18px, 400, $second-family);
+  padding: 12px 10px;
   text-align: center;
   @include media($md) {
-    @include font(20px, 20px, 400, "Oswald");
+    @include font(20px, 20px, 400, $second-family);
     padding-top: 17px;
     padding-bottom: 17px;
+    padding-left: 15px;
   }
   &:hover {
     background-color: $button-bg-opacity;
@@ -28,5 +29,7 @@
   }
 }
 .button--width{
-  max-width: 244px;
+  @include media($md) {
+    max-width: 244px;
+  }
 }
