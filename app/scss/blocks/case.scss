@@ -1,0 +1,120 @@
+.case {
+  background-color: $case-bg;
+  padding: 24px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media($md) {
+    display: block;
+    padding: 77px 50px 0;
+  }
+  @include media($lg) {
+    display: block;
+    padding: 31px 51px 0;
+  }
+}
+.case__wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include media($md) {
+    display: block;
+    max-width: 604px;
+    margin: 0 auto;
+  }
+}
+.case__wrap-top {
+  display: flex;
+  margin-bottom: 22px;
+  @include media($md) {
+    margin-bottom: 24px;
+  }
+  @include media($lg) {
+    align-items: center;
+    margin-bottom: 55px;
+  }
+}
+.case__wrap-img {
+  background-color: $case-bg-green;
+  border-radius: 50%;
+  margin-right: 21px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media($md) {
+    position: absolute;
+    top: 15px;
+    right: 9px;
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+  @include media($lg) {
+    position: relative;
+    margin-right: 62px;
+    width: 100px;
+    height: 100px;
+    right: 0;
+  }
+}
+.case__img {
+  width: 36px;
+  height: 50px;
+  color: $case-bg-black;
+  flex-shrink: 0;
+  margin-top: -6px;
+  @include media($md) {
+    width: 140px;
+    height: 194px;
+    margin-top: -29px;
+  }
+  @include media($lg) {
+    width: 70px;
+    height: 97px;
+    margin-top: -15px;
+  }
+}
+.case__img--width {
+  width: 67px;
+  height: 28px;
+  margin-top: 0;
+  @include media($md) {
+    width: 268px;
+    height: 112px;
+  }
+  @include media($lg) {
+    margin-top: -4px;
+    width: 134px;
+    height: 56px;
+  }
+}
+.case__title {
+  @include font(24px, 37px, 400, $second-family);
+  color: $case-color-black;
+  padding-top: 5px;
+  @include media($md) {
+    @include font(36px, 36px, 400, $second-family);
+    padding-top: 0;
+  }
+  @include media($lg) {
+    padding-top: 25px;
+  }
+}
+.case__decr {
+  @include font(14px, 18px, 400, $Arial-family);
+  color: $case-color-grey;
+  max-width: 250px;
+  margin-bottom: 23px;
+  @include media($md) {
+    margin-bottom: 0;
+    max-width: 340px;
+    @include font(16px, 24px, 400, $Arial-family);
+  }
+  @include media($lg) {
+    max-width: 480px;
+  }
+}
+.case__link {
+}

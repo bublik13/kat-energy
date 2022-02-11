@@ -1,0 +1,42 @@
+.link {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 22px;
+  border-top: 1px solid $link-border;
+  @include media($md) {
+    border-top: 1px solid transparent;
+    padding-top: 51px;
+    padding-bottom: 57px;
+  }
+  @include media($lg) {
+    padding-top: 25px;
+    padding-bottom: 59px;
+  }
+}
+.link__name {
+  @include font(16px, 16px, 400, $second-family);
+  color: $link-color-black;
+  margin-right: 17px;
+  @include media($md) {
+    @include font(20px, 30px, 400, $second-family);
+    margin-right: 26px;
+  }
+  @include media($lg) {
+    margin-right: 29px;
+  }
+}
+.link__img {
+  width: 24px;
+  height: 12px;
+}
+.link:hover .link__img {
+  width: 32px;
+}
+.link:focus .link__img {
+  width: 32px;
+  opacity: 0.3;
+}
+.link:focus .link__name {
+  opacity: 0.3;
+}
