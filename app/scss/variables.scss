@@ -1,7 +1,7 @@
 //fonts
 $basic-family: "Roboto", "Arial", "Helvetica", "Oswald", sans-serif;
 $second-family: "Oswald", Arial, sans-serif;
-$Arial-family: Arial, sans-serif, "Oswald";
+$arial-family: Arial, sans-serif, "Oswald";
 //container
 $container-min-width: 320px;
 $container-max-width: 1440px;
@@ -15,10 +15,15 @@ $button-bg-opacity: #5eaa2f;
 $case-bg-green: #68b738;
 $case-bg: #f2f2f2;
 $case-bg-black: #000000;
+$description-bg-white: #ffffff;
+$link-bg-green: #68b738;
+$link-bg-white: #ffffff;
+$link-bg-pink: #F2F2F2;
+
 
 //border
 $nav-border: #e6e6e6;
-$link-border: #D9D9D9;
+$link-border: #d9d9d9;
 
 //line
 $nav-line-green: #68b738;
@@ -28,6 +33,7 @@ $nav-line-white: #ffffff;
 $brand-color: #000000;
 $header-color-black: #000000;
 $title-color-white: #ffffff;
+$title-color-black: #000000;
 $subtitle-color-white: #ffffff;
 $button-color-white: #ffffff;
 $button-color-opacity: rgba(255, 255, 255, 0.3);
@@ -37,7 +43,6 @@ $nav-color-focus: rgba(0, 0, 0, 0.3);
 $nav-color-hover-white: rgba(255, 255, 255, 0.6);
 $nav-color-focus-white: rgba(255, 255, 255, 0.3);
 $nav-color-white: #ffffff;
-$case-color-black: #000000;
 $case-color-grey: #444444;
 $link-color-black: #000000;
 

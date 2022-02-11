@@ -7,6 +7,20 @@
     text-align: start;
     max-width: 414px;
     @include font(60px, 60px, 400, $second-family);
-   color: $header-color-black;
+    color: $header-color-black;
+  }
+}
+.title--xs {
+  @include font(24px, 37px, 400, $second-family);
+  color: $title-color-black;
+  @include media($md) {
+    @include font(36px, 36px, 400, $second-family);
+  }
+}
+.title--lg {
+  @include font(36px, 40px, 400, $second-family);
+  color: $title-color-black;
+  @include media($md) {
+    @include font(60px, 60px, 400, $second-family);
   }
 }
