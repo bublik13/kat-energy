@@ -1,0 +1,35 @@
+.info__container {
+  padding-top: 198px;
+  @include media($md) {
+    padding-top: 513px;
+  }
+  @include media($lg) {
+    padding-top: 83px;
+  }
+}
+.info__wrap {
+  display: flex;
+  flex-direction: column;
+  @include media($md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media($lg) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+.info__case {
+  margin-bottom: 20px;
+  @include media($md) {
+    margin-bottom: 30px;
+  }
+  @include media($lg) {
+    margin-bottom: 0;
+  }
+}
+.info__case:not(:last-child) {
+  @include media($lg) {
+    margin-right: 80px;
+  }
+}

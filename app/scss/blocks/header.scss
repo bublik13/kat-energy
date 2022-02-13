@@ -1,7 +1,7 @@
 .header {
   @include media($lg) {
     position: relative;
-    padding-bottom: 200px;
+    padding-bottom: 228px;
   }
 }
 .header:after {
@@ -24,13 +24,15 @@
     right: 0;
     bottom: 0;
     background: -webkit-image-set(
-      url("../img/header/kat-desktop-1x.jpg") 1x,
-      url("../img/header/kat-desktop-2x.webp") 2x
-    ) no-repeat right bottom/cover;
+        url("../img/header/kat-desktop-1x.jpg") 1x,
+        url("../img/header/kat-desktop-2x.webp") 2x
+      )
+      no-repeat right bottom/cover;
     background: image-set(
-      url("../img/header/kat-desktop-1x.jpg") 1x,
-      url("../img/header/kat-desktop-2x.webp") 2x
-    ) no-repeat right bottom/cover;
+        url("../img/header/kat-desktop-1x.jpg") 1x,
+        url("../img/header/kat-desktop-2x.webp") 2x
+      )
+      no-repeat right bottom/cover;
   }
 }
 .header__top {
