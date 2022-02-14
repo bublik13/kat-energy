@@ -1,0 +1,23 @@
+.progress {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.progress__range {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  -webkit-appearance: none !important;
+  height: 14px;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #cdcdcd;
+  border-radius: 10%;
+  margin: 0 10px;
+}
+.progress__range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: green;
+  height: 6px;
+  width: 45px;
+  border-radius: 10%;
+}

@@ -1,0 +1,33 @@
+.slaider {
+  position: relative;
+  height: 270px;
+  max-width: 320px;
+}
+.slaider__one {
+  display: block;
+  width: 250px;
+  height: 270px;
+  margin-left: 42px;
+  background: url("../img/example/cat-skinny-mobile-2x.png") no-repeat;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+  background-size: 100%;
+}
+.slaider__two{
+  position: absolute;
+  width: 280px;
+  height: 270px;
+  left: 0;
+  top: 0;
+  background-color: #ffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+.slaider__two::before {
+  content: " ";
+  position: absolute;
+  width: 280px;
+  height: 270px;
+  background: url("../img/example/cat-fat-mobile-2x.png") no-repeat;
+  background-size: 100%;
+}
