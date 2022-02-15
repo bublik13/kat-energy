@@ -2,22 +2,28 @@
   z-index: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .progress__range {
   transition: transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
   -webkit-appearance: none !important;
   height: 14px;
-  background: #fff;
+  background-color: $progress-bg-white;
   cursor: pointer;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $progress-border;
   border-radius: 10%;
-  margin: 0 10px;
+  margin: 0 18px;
+  width: 85px;
 }
 .progress__range::-webkit-slider-thumb {
   -webkit-appearance: none !important;
-  background: green;
+  background-color: $progress-bg-green;
   height: 6px;
   width: 45px;
   border-radius: 10%;
+}
+.progress__result {
+  color: $progress-color-black;
+  @include font(16px, 20px, 400, $second-family);
 }

@@ -1,14 +1,21 @@
+.description{
+  border-bottom:1px solid $description-border;
+}
 .description__container {
   background-color: $description-bg-white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 29px;
   @include media($md) {
     padding-top: 15px;
+    padding-bottom: 77px;
+    max-width: 768px;
   }
   @include media($lg) {
     padding-top: 72px;
+    max-width: 1440px;
   }
 }
 .description__title {

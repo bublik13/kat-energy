@@ -1,24 +1,101 @@
+.example {
+  background: $example-bg-pink;
+  @include media($md) {
+    background: $example-bg-white;
+  }
+}
 .example__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.example__wrap {
+  padding-top: 24px;
+  padding-bottom: 46px;
+  @include media($md) {
+    padding-top: 43px;
+    max-width: 768px;
+  }
 }
 .example__title {
+  text-align: center;
+  padding-right: 85px;
+  margin-bottom: 41px;
+  @include media($md) {
+    margin-bottom: 63px;
+    padding-right: 0;
+    text-align: left;
+  }
 }
 .example__desc {
-  max-width: 280px;
+  text-align: left;
+  margin-bottom: 20px;
+  @include media($md) {
+    margin-bottom: 54px;
+    max-width: 700px;
+  }
 }
 .example__wrap-desc {
+  width: 100%;
+  margin-bottom: 40px;
+  @include media($md) {
+    display: flex;
+  }
+}
+.example__top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+  @include media($md) {
+    margin-bottom: 80px;
+  }
 }
 .example__wrap-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 124px;
+  border: 1px solid $example-border;
+  padding: 14px 20px 17px;
+  border-radius: 4px;
+  @include media($md) {
+    max-width: 162px;
+  
+  }
 }
-.example__wrap-text {
+.example__wrap-line:first-child {
+  margin-right: 32px;
 }
 .example__text {
+  color: $example-color-black;
+  @include font(24px, 24px, 400, $second-family);
+  margin-bottom: 6px;
+  max-width: 83px;
+  @include media($md) {
+    max-width: 102px;
+    @include font(30px, 37px, 400, $second-family);
+  }
 }
 .example__subtext {
+  text-align: center;
+  margin-bottom: -31px;
+  background-color: $example-bg-pink;
+  color: $example-color-grey;
+  @include font(12px, 12px, 400, $arial-family);
+  max-width: 93px;
+  padding: 0 12px 0 10px;
+  @include media($md) {
+    padding: 0 5px;
+    max-width: 120px;
+    margin-bottom: -25px;
+    background-color: $example-bg-white;
+  }
 }
 .example__result {
+  color: $example-color-black;
+  @include font(14px, 20px, 400, $second-family);
+  text-align: center;
+  @include media($md) {
+    margin-left: auto;
+    text-align: right;
+    max-width: 124px;
+  }
 }
