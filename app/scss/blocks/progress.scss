@@ -15,6 +15,11 @@
   border-radius: 10%;
   margin: 0 18px;
   width: 85px;
+  @include media($md) {
+    width: 426px;
+    height: 6px;
+    background-color: $progress-bg-pink;
+  }
 }
 .progress__range::-webkit-slider-thumb {
   -webkit-appearance: none !important;
@@ -22,8 +27,21 @@
   height: 6px;
   width: 45px;
   border-radius: 10%;
+  @include media($md) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $progress-bg-green;
+    border: 13px solid $progress-bg-white;
+    position: relative;
+    outline: 1px solid $progress-border;
+  }
 }
 .progress__result {
   color: $progress-color-black;
   @include font(16px, 20px, 400, $second-family);
+  @include media($md) {
+    @include font(20px, 30px, 400, $second-family);
+    border-bottom: 2px dashed $progress-border;
+  }
 }

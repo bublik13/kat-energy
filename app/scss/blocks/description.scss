@@ -1,5 +1,8 @@
-.description{
-  border-bottom:1px solid $description-border;
+.description {
+  border-bottom: 1px solid $description-border;
+  @include media($lg) {
+    border-bottom: 1px solid transparent;
+  }
 }
 .description__container {
   background-color: $description-bg-white;
@@ -10,7 +13,7 @@
   padding-bottom: 29px;
   @include media($md) {
     padding-top: 15px;
-    padding-bottom: 77px;
+    padding-bottom: 101px;
     max-width: 768px;
   }
   @include media($lg) {
