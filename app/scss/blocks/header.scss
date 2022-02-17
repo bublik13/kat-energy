@@ -157,8 +157,10 @@
 .header__title {
   margin-bottom: 25px;
   z-index: 1;
+  max-width: 281px;
   @include media($md) {
     margin-bottom: 42px;
+    max-width: 414px;
   }
   @include media($lg) {
     margin-bottom: 40px;

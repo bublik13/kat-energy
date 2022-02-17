@@ -108,12 +108,12 @@
           <article class="case info__case">
             <div class="case__wrap">
               <div class="case__wrap-top">
-                <div title="twitter" class="case__wrap-img" href="#">
+                <div class="case__wrap-img" href="#">
                   <svg aria-hidden="true" class="case__img">
                     <use xlink:href="#cat-slim"></use>
                   </svg>
                 </div>
-                <div class="case__title title--xs">ПОХУДЕНИЕ</div>
+                <div class="case__title title title--xs">ПОХУДЕНИЕ</div>
               </div>
               <p class="case__desc desc">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -129,7 +129,7 @@
           <article class="case info__case">
             <div class="case__wrap">
               <div class="case__wrap-top">
-                <div title="twitter" class="case__wrap-img" href="#">
+                <div class="case__wrap-img" href="#">
                   <svg aria-hidden="true" class="case__img case__img--width">
                     <use xlink:href="#cat-pro"></use>
                   </svg>
@@ -152,7 +152,7 @@
     </section>
     <section class="description">
       <div class="description__container container">
-        <h2 class="description__title title--lg">Как это работает</h2>
+        <h2 class="description__title title title--lg">Как это работает</h2>
         <ol class="description__list list">
           <li class="list__item">
             <div class="list__wrap">
@@ -200,7 +200,7 @@
     <section class="example">
       <div class="example__container container">
         <div class="example__wrap">
-          <h3 class="example__title title--lg">Живой пример</h3>
+          <h3 class="example__title title title--lg">Живой пример</h3>
           <p class="example__desc desc">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. 
           </p>
@@ -229,10 +229,10 @@
             <div class="example__result">15 000 РУБ.</div>
           </div>
         </div>
-        <div class="example__slaider slaider">
-          <span class="slaider__one"></span>
-          <span class="slaider__two" id="fillRangeValue"></span>
-          <div class="slaider__progress progress">
+        <div class="example__slider slider">
+          <span class="slider__one"></span>
+          <span class="slider__two" id="fillRangeValue"></span>
+          <div class="slider__progress progress">
             <div class="progress__result">БЫЛО</div>
             <input type="range" class="progress__range" name="" value="0" min="0" max="100" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
             <div class="progress__result">СТАЛО</div>
@@ -240,6 +240,20 @@
         </div>
       </div>
     </section>
+<div class="cat-slider">
+  <div class="cat-slider__item cat-slider__item--before" style="width: 50%">
+    <picture>
+      <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
+      <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
+    </picture> 
+  </div>
+  <div class="cat-slider__item cat-slider__item--after" style="width: 50%">
+    <picture>
+      <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
+      <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
+    </picture> 
+  </div>
+</div>
     <!-- подключаем js -->
     <script>
       const body = document.querySelector('.js-body');
@@ -260,4 +274,3 @@
   </body>
 
 </html>
-<!-- исправить кэт энерджи, изменить картику еды на пнж -->

@@ -94,3 +94,30 @@
     top: 5px;
   }
 }
+
+.cat-slider {
+  position: relative;
+  height: 232px;
+  width: 100%;
+  display: flex;
+}
+.cat-slider__item {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.cat-slider__item--before {
+}
+.cat-slider__item--after {
+
+  
+}
+.cat-slider__img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}

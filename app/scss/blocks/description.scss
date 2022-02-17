@@ -6,10 +6,6 @@
 }
 .description__container {
   background-color: $description-bg-white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 29px;
   @include media($md) {
     padding-top: 15px;

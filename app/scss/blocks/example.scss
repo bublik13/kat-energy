@@ -29,13 +29,12 @@
   }
 }
 .example__title {
-  text-align: center;
+  text-align: left;
   padding-right: 85px;
   margin-bottom: 41px;
   @include media($md) {
     margin-bottom: 63px;
     padding-right: 0;
-    text-align: left;
   }
   @include media($lg) {
     margin-bottom: 146px;
