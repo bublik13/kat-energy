@@ -134,7 +134,7 @@
                     <use xlink:href="#cat-pro"></use>
                   </svg>
                 </div>
-                <div class="case__title title--xs">НАБОР МАССЫ</div>
+                <div class="case__title title title--xs">НАБОР МАССЫ</div>
               </div>
               <p class="case__desc desc">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -241,19 +241,22 @@
       </div>
     </section>
 <div class="cat-slider">
-  <div class="cat-slider__item cat-slider__item--before" style="width: 50%">
+  <div class="cat-slider__item cat-slider__item--before" style="clip-path: inset(0% var(--slider-move));">
     <picture>
       <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
       <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
     </picture> 
   </div>
-  <div class="cat-slider__item cat-slider__item--after" style="width: 50%">
+  <div class="cat-slider__item cat-slider__item--after" style="clip-path: inset(0% var(--slider-move));">
     <picture>
       <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
       <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
     </picture> 
   </div>
 </div>
+
+  <input type="range" min="-50" max="50" class="cat-slider-range" oninput="slide()"  >
+
     <!-- подключаем js -->
     <script>
       const body = document.querySelector('.js-body');
@@ -270,6 +273,16 @@
         // document.getElementById('rangeValue').innerHTML =value;
         document.getElementById('fillRangeValue').style.width=+value+"%";
       }
+
+      function slide(){
+        let range = document.querySelector(".cat-slider-range");
+        let slid1 = document.querySelector(".cat-slider__item--before"); 
+        let slid2 = document.querySelector(".cat-slider__item--after"); 
+        slid1.style.setProperty("--slider-move", value * -1 + "%"); 
+        slid2.style.setProperty("--slider-move", value + "%"); 
+      }
+      
+
     </script>
   </body>
 
