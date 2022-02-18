@@ -46,184 +46,183 @@
 //   }
 // }
 
-input[type="range"] {
+.progress__range[type="range"] {
   -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
-  width: 100%; /* Указание параметра ширины требуется для Firefox. */
+  width: 85px; /* Указание параметра ширины требуется для Firefox. */
+  border-radius: 6px;
+  height: 14px;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.progress__range[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-input[type="range"]:focus {
+.progress__range[type="range"]:focus {
   outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
 }
 
-input[type="range"]::-ms-track {
-  width: 100%;
+.progress__range[type="range"]::-ms-track {
+  width: 85px;
   cursor: pointer;
-  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  background-color: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
   border-color: transparent;
   color: transparent;
 }
-input[type="range"]::-webkit-slider-thumb {
+.progress__range[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid #000000;
+  border: 1px solid $progress-bg-green;
   height: 6px;
   width: 36px;
   border-radius: 3px;
-  background: #68b738;
+  background-color: $progress-bg-green;
   cursor: pointer;
-  margin-top: -14px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Добавляем классные эффекты для слайдера! */
+  margin-top: 3px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+  box-shadow: none; /* Добавляем классные эффекты для слайдера! */
 }
 
 /* Тоже самое для Firefox */
-input[type="range"]::-moz-range-thumb {
-  border: 1px solid #68b738;
+.progress__range[type="range"]::-moz-range-thumb {
+  border: 1px solid $progress-bg-green;
   height: 6px;
   width: 36px;
   border-radius: 3px;
-  background: #68b738;
+  background-color: $progress-bg-green;
   cursor: pointer;
 }
 
 /* Тоже самое для IE */
-input[type="range"]::-ms-thumb {
-  border: 1px solid #68b738;
+.progress__range[type="range"]::-ms-thumb {
+  border: 1px solid $progress-bg-green;
   height: 6px;
   width: 36px;
   border-radius: 3px;
-  background: #68b738;
+  background-color: $progress-bg-green;
   cursor: pointer;
 }
-input[type="range"]::-webkit-slider-runnable-track {
+.progress__range[type="range"]::-webkit-slider-runnable-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
-
-  background: #ffffff;
+  background-color: $progress-bg-white;
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $progress-border;
 }
 
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
-}
+// input[type="range"]:focus::-webkit-slider-runnable-track {
+//   background: #ffffff;
+// }
 
-input[type="range"]::-moz-range-track {
+.progress__range[type="range"]::-moz-range-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
-
-  background: #ffffff;
+  background-color: $progress-bg-white;
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $progress-border;
 }
 
-input[type="range"]::-ms-track {
+.progress__range[type="range"]::-ms-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
-  background: transparent;
+  background-color: transparent;
   border-color: transparent;
   border-width: 16px 0;
   color: transparent;
 }
-input[type="range"]::-ms-fill-lower {
-  background: #ffffff;
-  border: 1px solid #cdcdcd;
-  border-radius: 2.6px;
+.progress__range[type="range"]::-ms-fill-lower {
+  background-color: $progress-bg-white;
+  border: 1px solid $progress-border;
+  border-radius: 6px;
 }
-input[type="range"]:focus::-ms-fill-lower {
-  background: #3071a9;
+.progress__range[type="range"]:focus::-ms-fill-lower {
+  background-color: $progress-bg-white;
 }
-input[type="range"]::-ms-fill-upper {
-  background: #ffffff;
-  border: 1px solid #cdcdcd;
-  border-radius: 2.6px;
+.progress__range[type="range"]::-ms-fill-upper {
+  background-color: $progress-bg-white;
+  border: 1px solid $progress-border;
+  border-radius: 6px;
 }
-input[type="range"]:focus::-ms-fill-upper {
-  background: #367ebd;
+.progress__range[type="range"]:focus::-ms-fill-upper {
+  background-color: $progress-bg-white;
 }
-
-input[type="range"] {
+.progress__range[type="range"] {
   -webkit-appearance: none;
-  margin: 18px 0;
+  margin: 0 18px;
   width: 85px;
 }
-input[type="range"]:focus {
-  outline: none;
-}
-input[type="range"]::-webkit-slider-runnable-track {
+// input[type="range"]:focus {
+//   outline: none;
+// }
+.progress__range[type="range"]::-webkit-slider-runnable-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
   animate: 0.2s;
-  background: #ffffff;
+  background-color: $progress-bg-white;
   border-radius: 6px;
 }
-input[type="range"]::-webkit-slider-thumb {
+.progress__range[type="range"]::-webkit-slider-thumb {
   box-shadow: none;
-  border: 1px solid #68b738;
+  border: 1px solid $progress-bg-green;
   height: 6px;
   width: 36px;
   border-radius: 6px;
-  background: #68b738;
+  background-color: $progress-bg-green;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: 3px;
 }
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
-}
-input[type="range"]::-moz-range-track {
+// input[type="range"]:focus::-webkit-slider-runnable-track {
+//   background: #ffffff;
+// }
+.progress__range[type="range"]::-moz-range-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
   animate: 0.2s;
-  background: #ffffff;
+  background-color: $progress-bg-white;
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $progress-border;
 }
-input[type="range"]::-moz-range-thumb {
-  border: 1px solid #68b738;
+.progress__range[type="range"]::-moz-range-thumb {
+  border: 1px solid $progress-bg-green;
   height: 6px;
   width: 36px;
   border-radius: 6px;
-  background: #68b738;
+  background-color: $progress-bg-green;
   cursor: pointer;
 }
-input[type="range"]::-ms-track {
+.progress__range[type="range"]::-ms-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
   animate: 0.2s;
-  background: transparent;
+  background-color: transparent;
   border-color: transparent;
   border-width: 16px 0;
   color: transparent;
 }
-input[type="range"]::-ms-fill-lower {
-  background: #ffffff;
-  border: 1px solid #cdcdcd;
+.progress__range[type="range"]::-ms-fill-lower {
+  background-color: $progress-bg-white;
+  border: 1px solid $progress-border;
   border-radius: 6px;
 }
-input[type="range"]::-ms-fill-upper {
-  background: #ffffff;
-  border: 1px solid #cdcdcd;
+.progress__range[type="range"]::-ms-fill-upper {
+  background-color:  $progress-bg-white;
+  border: 1px solid $progress-border;
   border-radius: 6px;
 }
-input[type="range"]::-ms-thumb {
+.progress__range[type="range"]::-ms-thumb {
   height: 6px;
   width: 36px;
   border-radius: 6px;
-  background: #ffffff;
+  background-color:  $progress-bg-white;
   cursor: pointer;
 }
-input[type="range"]:focus::-ms-fill-lower {
-  background: #ffffff;
-}
-input[type="range"]:focus::-ms-fill-upper {
-  background: #ffffff;
-}
+// input[type="range"]:focus::-ms-fill-lower {
+//   background: #ffffff;
+// }
+// input[type="range"]:focus::-ms-fill-upper {
+//   background: #ffffff;
+// }
