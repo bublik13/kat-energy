@@ -1,10 +1,18 @@
 .example {
   background: $example-bg-pink;
   @include media($md) {
-    background: linear-gradient(to top, #eaeaea 43%, #fff 0%);
+    background: linear-gradient(
+      to top,
+      $example-bg-pink 43%,
+      $example-bg-white 0%
+    );
   }
   @include media($lg) {
-    background: linear-gradient(to top, #eaeaea 75%, #fff 0%);
+    background: linear-gradient(
+      to top,
+      $example-bg-pink 75%,
+      $example-bg-white 0%
+    );
   }
 }
 .example__container {
@@ -13,10 +21,11 @@
   align-items: center;
   padding-top: 24px;
   padding-bottom: 46px;
+  position: relative;
   @include media($md) {
     padding-top: 43px;
     max-width: 768px;
-    padding-bottom: 113px;
+    padding-bottom: 60px;
     padding-left: 12px;
   }
   @include media($lg) {
@@ -159,5 +168,12 @@
   }
   @include media($lg) {
     margin-left: 0;
+  }
+}
+.example__wrap-slider {
+  @include media($lg) {
+    position: absolute;
+    top: 0;
+    right: 69px;
   }
 }

@@ -158,7 +158,9 @@
   margin-bottom: 25px;
   z-index: 1;
   max-width: 281px;
+  text-align: center;
   @include media($md) {
+    text-align: left;
     margin-bottom: 42px;
     max-width: 414px;
   }

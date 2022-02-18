@@ -1,9 +1,7 @@
 .title {
   @include font(36px, 36px, 400, $second-family);
   color: $title-color-white;
-  text-align: center;
   @include media($md) {
-    text-align: left;
     @include font(60px, 60px, 400, $second-family);
     color: $header-color-black;
   }

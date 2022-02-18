@@ -35,8 +35,8 @@
 }
 .progress__range[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-border: 1px solid $progress-bg-green;
- height: 6px;
+  border: 1px solid $progress-bg-green;
+  height: 6px;
   width: 36px;
   border-radius: 3px;
   background-color: $progress-bg-green;
@@ -50,7 +50,7 @@ border: 1px solid $progress-bg-green;
     background-color: $progress-bg-green;
     border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px $box-shadow-black;
   }
 }
 // /* Тоже самое для Firefox */
@@ -68,7 +68,7 @@ border: 1px solid $progress-bg-green;
     background-color: $progress-bg-green;
     border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px $box-shadow-black;
   }
 }
 /* Тоже самое для IE */
@@ -86,7 +86,7 @@ border: 1px solid $progress-bg-green;
     background-color: $progress-bg-green;
     border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px $box-shadow-black;
   }
 }
 .progress__range[type="range"]::-webkit-slider-runnable-track {
@@ -178,7 +178,6 @@ border: 1px solid $progress-bg-green;
   width: 85px;
   height: 14px;
   cursor: pointer;
-  animate: 0.2s;
   background-color: $progress-bg-white;
   border-radius: 6px;
   @include media($md) {
@@ -205,18 +204,14 @@ border: 1px solid $progress-bg-green;
     background-color: $progress-bg-green;
     border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px $box-shadow-black;
     margin-top: -15px;
   }
-}
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
 }
 .progress__range[type="range"]::-moz-range-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
-  animate: 0.2s;
   background-color: $progress-bg-white;
   border-radius: 6px;
   border: 1px solid $progress-border;
@@ -235,20 +230,19 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background-color: $progress-bg-green;
   cursor: pointer;
   @include media($md) {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: $progress-bg-green;
-    border: 15px solid $progress-bg-white;
+    border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px, rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px, $box-shadow-black;
   }
 }
 .progress__range[type="range"]::-ms-track {
   width: 85px;
   height: 14px;
   cursor: pointer;
-  animate: 0.2s;
   background-color: transparent;
   border-color: transparent;
   border-width: 16px 0;
@@ -281,7 +275,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   width: 36px;
   border-radius: 6px;
   background-color: $progress-bg-white;
-
   cursor: pointer;
   @include media($md) {
     border-width: 16px 0;
@@ -291,14 +284,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     background-color: $progress-bg-green;
     border: 13px solid $progress-bg-white;
     outline: 1px solid $progress-border-pink;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 10px $box-shadow-black;
   }
-}
-input[type="range"]:focus::-ms-fill-lower {
-  background: #ffffff;
-}
-input[type="range"]:focus::-ms-fill-upper {
-  background: #ffffff;
 }
 .progress__result {
   color: $progress-color-black;
