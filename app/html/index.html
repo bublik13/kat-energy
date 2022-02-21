@@ -13,7 +13,7 @@
   </head>
 
   <body class="body js-body">
-    <img class="pp"   hidden src="img/desktop.jpg" alt="">
+    <img class="pp"  hidden  src="img/desktop.jpg" alt="">
     <style>
       .pp {
         position: absolute;
@@ -105,15 +105,15 @@
     <section class="info">
       <div class="info__container container">
         <div class="info__wrap">
-          <article class="case info__case">
+          <div class="info__case case">
             <div class="case__wrap">
               <div class="case__wrap-top">
-                <div title="twitter" class="case__wrap-img" href="#">
+                <div class="case__wrap-img">
                   <svg aria-hidden="true" class="case__img">
                     <use xlink:href="#cat-slim"></use>
                   </svg>
                 </div>
-                <div class="case__title title--xs">ПОХУДЕНИЕ</div>
+                <h2 class="case__title title title--xs">ПОХУДЕНИЕ</h2>
               </div>
               <p class="case__desc desc">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -125,16 +125,16 @@
                 </svg>
               </a>
             </div>
-          </article>
-          <article class="case info__case">
+          </div>
+          <div class="info__case case">
             <div class="case__wrap">
               <div class="case__wrap-top">
-                <div title="twitter" class="case__wrap-img" href="#">
+                <div class="case__wrap-img">
                   <svg aria-hidden="true" class="case__img case__img--width">
                     <use xlink:href="#cat-pro"></use>
                   </svg>
                 </div>
-                <div class="case__title title--xs">НАБОР МАССЫ</div>
+                <h3 class="case__title title title--xs">НАБОР МАССЫ</h3>
               </div>
               <p class="case__desc desc">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -146,13 +146,13 @@
                 </svg>
               </a>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
     <section class="description">
       <div class="description__container container">
-        <h2 class="description__title title--lg">Как это работает</h2>
+        <h4 class="description__title title title--lg">Как это работает</h4>
         <ol class="description__list list">
           <li class="list__item">
             <div class="list__wrap">
@@ -197,6 +197,61 @@
         </ol>
       </div>
     </section>
+    <section class="example">
+      <div class="example__container container">
+        <div class="example__wrap">
+          <h5 class="example__title title title--lg">Живой пример</h5>
+          <p class="example__desc desc">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. 
+          </p>
+        </div>
+        <div class="example__wrap-desc">
+          <div class="example__top">
+            <div class="example__wrap-line">
+              <div class="example__wrap-text">
+                <div class="example__text">5 КГ</div>
+              </div>
+              <div class="example__subtext">
+                снижение веса
+              </div>
+            </div>
+            <div class="example__wrap-line">
+              <div class="example__wrap-text">
+                <div class="example__text">60 ДНЕЙ</div>
+              </div>
+              <div class="example__subtext">
+                затрачено времени
+              </div>
+            </div>
+          </div>
+          <div class="example__wrap-result">
+            <div class="example__result">ЗАТРАТЫ НА ПИТАНИЕ:</div>
+            <div class="example__result">15 000 РУБ.</div>
+          </div>
+        </div>
+        <div class="example__wrap-slider">
+          <div class="example__cat-slider cat-slider">
+            <div class="cat-slider__item">
+              <picture>
+                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
+                <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
+              </picture> 
+            </div>
+            <div class="cat-slider__item">
+              <picture>
+                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
+                <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
+              </picture> 
+            </div>
+          </div>
+          <div class="example__progress progress">
+            <div class="progress__result">БЫЛО</div>
+            <input value="50" class="progress__range" oninput="changeValue()" type="range">
+            <div class="progress__result">СТАЛО</div>
+          </div>
+        </div>
+      </div>    
+    </section>
     <!-- подключаем js -->
     <script>
       const body = document.querySelector('.js-body');
@@ -208,8 +263,16 @@
         nav.classList.toggle('header__nav--active');
         body.classList.toggle('body--lock');
       });
+
+      let range = document.querySelector(".progress__range");
+      let slider = document.querySelector(".cat-slider");
+
+      function changeValue() {
+        let value = Number(range.value);
+        slider.style.setProperty("--slider-move-left", 100 - value + "%");
+        slider.style.setProperty("--slider-move-right", value + "%");
+      }
     </script>
   </body>
 
 </html>
-<!-- исправить кэт энерджи, изменить картику еды на пнж -->

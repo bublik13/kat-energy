@@ -18,12 +18,25 @@ $case-bg-black: #000000;
 $description-bg-white: #ffffff;
 $link-bg-green: #68b738;
 $link-bg-white: #ffffff;
-$link-bg-pink: #F2F2F2;
-
+$link-bg-pink: #f2f2f2;
+$example-bg-pink: #eaeaea;
+$example-bg-white: #ffffff;
+$slaider-bg-white: #ffffff;
+$slaider-bg-pink: #eaeaea;
+$progress-bg-white: #ffffff;
+$progress-bg-green: #68b738;
+$progress-bg-pink: #dcdcdc;
 
 //border
 $nav-border: #e6e6e6;
 $link-border: #d9d9d9;
+$example-border: #cdcdcd;
+$progress-border-pink: #cdcdcd;
+$progress-border: rgba(0, 0, 0, 0.4);
+$description-border: #e6e6e6;
+
+//box-shadow
+$box-shadow-black: rgba(0, 0, 0, 0.16);
 
 //line
 $nav-line-green: #68b738;
@@ -45,6 +58,9 @@ $nav-color-focus-white: rgba(255, 255, 255, 0.3);
 $nav-color-white: #ffffff;
 $case-color-grey: #444444;
 $link-color-black: #000000;
+$example-color-black: #000000;
+$example-color-grey: #444444;
+$progress-color-black: #000000;
 
 //media
 $xs: 350px;
