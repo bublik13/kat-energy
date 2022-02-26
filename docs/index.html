@@ -8,12 +8,12 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" href="css/main.css?t=1645192509085">
+      <link rel="stylesheet" href="css/main.css?t=1645895411146">
       <link type="image/png" sizes="32x32" rel="icon" href="../img/favicon.png">
   </head>
 
   <body class="body js-body">
-<picture><source srcset="img/desktop.avif" type="image/avif"><source srcset="img/desktop.webp" type="image/webp"><img class="pp"  hidden  src="img/desktop.jpg" alt=""></picture>
+<picture><source srcset="img/mobile.avif" type="image/avif"><source srcset="img/mobile.webp" type="image/webp"><img class="pp"  hidden  src="img/mobile.jpg" alt=""></picture>
     <style>
       .pp {
         position: absolute;
@@ -229,7 +229,7 @@
             <div class="example__result">15 000 РУБ.</div>
           </div>
         </div>
-        <div class="example__wrap-slider">
+        <!-- <div class="example__wrap-slider">
           <div class="example__cat-slider cat-slider">
             <div class="cat-slider__item">
               <picture>
@@ -249,6 +249,27 @@
             <input value="50" class="progress__range" oninput="changeValue()" type="range">
             <div class="progress__result">СТАЛО</div>
           </div>
+        </div> -->
+        <div class="slider__wrap">
+
+          <div class="slider js-slider">
+            <button type="submit" class="slider__before js-before">БЫЛО</button>
+            <input value="50" class="slider__range js-slider__range" oninput="changeSliderValue()" type="range">
+            <button type="submit" class="slider__after js-after">СТАЛО</button>
+            <div class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
+                <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="slider__img">
+              </picture> 
+            </div>
+            <div class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
+                <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="slider__img">
+              </picture> 
+            </div>
+          </div>
+
         </div>
       </div>    
     </section>
@@ -264,14 +285,26 @@
         body.classList.toggle('body--lock');
       });
 
-      let range = document.querySelector(".progress__range");
-      let slider = document.querySelector(".cat-slider");
+      const slider = document.querySelector(".js-slider");
+      const sliderRange = document.querySelector(".js-slider__range");
 
-      function changeValue() {
-        let value = Number(range.value);
-        slider.style.setProperty("--slider-move-left", 100 - value + "%");
-        slider.style.setProperty("--slider-move-right", value + "%");
+      function changeSliderValue() {
+        slider.style.setProperty("--slider-value", sliderRange.value + "%");
       }
+
+
+      const buttonAfter = document.querySelector('.js-before');
+      const buttonBefore = document.querySelector('.js-after');
+      const slider = document.querySelector(".js-slider");
+      const sliderRange = document.querySelector(".js-slider__range");
+
+      slider.addEventListener('click', ()=>{  
+        buttonBefore.classList.toggle(' --slider-move-left');
+      });
+      slider.addEventListener('click', ()=>{  
+        buttonAfter.classList.toggle(' --slider-move-right');
+      });
+
     </script>
   </body>
 
