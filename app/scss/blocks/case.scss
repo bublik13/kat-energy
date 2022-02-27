@@ -1,15 +1,15 @@
 .case {
   background-color: $case-bg;
-  padding: 24px 20px 0;
+  padding: 24px 20px 22px;
   display: flex;
   flex-direction: column;
   @include media($md) {
     display: block;
-    padding: 77px 50px 0;
+    padding: 77px 50px 57px;
   }
   @include media($lg) {
     display: block;
-    padding: 31px 51px 0;
+    padding: 31px 51px 59px;
   }
 }
 .case__wrap {
@@ -103,11 +103,12 @@
   max-width: 250px;
   margin-bottom: 23px;
   @include media($md) {
-    margin-bottom: 0;
+    margin-bottom: 33px;
     max-width: 340px;
     @include font(16px, 24px, 400, $arial-family);
   }
   @include media($lg) {
+    margin-bottom: 7px;
     max-width: 480px;
   }
 }
