@@ -1,0 +1,84 @@
+.map {
+  @include media($lg) {
+    position: relative;
+  }
+}
+.map__desc-container {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $map-bg-white;
+  @include media($md) {
+    padding: 54px 70px 60px;
+  }
+  @include media($lg) {
+    position: absolute;
+    z-index: 3;
+    top: 200px;
+  }
+}
+.map__desc {
+  max-width: 115px;
+  @include font(16px, 20px, 400, $second-family);
+  color: $map-color-black;
+  @include media($md) {
+    margin-top: 1px;
+    max-width: 172px;
+    @include font(20px, 26px, 400, $second-family);
+  }
+}
+.map__adress {
+  max-width: 140px;
+  @include font(14px, 20px, 400, $arial-family);
+  color: $map-color-dark-grey;
+  text-align: end;
+  @include media($md) {
+    max-width: 160px;
+    @include font(16px, 20px, 400, $arial-family);
+    margin-bottom: 18px;
+  }
+}
+.map__city {
+  @include font(14px, 20px, 400, $arial-family);
+  color: $map-color-dark-grey;
+  text-align: end;
+  @include media($md) {
+    @include font(16px, 20px, 400, $arial-family);
+  }
+}
+.map__container {
+  padding: 0;
+  position: relative;
+}
+.map__wrap {
+  position: relative;
+}
+.map__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  @include media($md) {
+    height: 100%;
+  }
+}
+.map__point {
+  width: 57px;
+  height: 53px;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  bottom: 28px;
+  left: 6px;
+  margin: auto;
+  @include media($md) {
+    width: 113px;
+    height: 106px;
+    bottom: 0;
+    left: 10px;
+  }
+}
+.map__logo {
+  width: 100%;
+  display: block;
+}
