@@ -28,7 +28,7 @@
     opacity: 1;
   }
 }
-.button--width{
+.button--width {
   @include media($md) {
     max-width: 244px;
   }

@@ -240,91 +240,40 @@
             <div class="example__result">15 000 РУБ.</div>
           </div>
         </div>
-        <!-- <div class="example__wrap-slider">
-          <div class="example__cat-slider cat-slider">
-            <div class="cat-slider__item">
-              <picture>
-                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
-                <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
-              </picture> 
-            </div>
-            <div class="cat-slider__item">
-              <picture>
-                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
-                <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="cat-slider__img">
-              </picture> 
-            </div>
-          </div>
-          <div class="example__progress progress">
-            <div class="progress__result">БЫЛО</div>
-            <input value="50" class="progress__range" oninput="changeValue()" type="range">
-            <div class="progress__result">СТАЛО</div>
-          </div>
-        </div> -->
-        <div class="slider__wrap">
-          <div class="slider js-slider">
-            <button type="submit" class="slider__before js-before">БЫЛО</button>
+        <div class="example__slider slider js-slider">
+          <div class="slider__wrap">
+            <button type="submit" class="slider__before-btn btn js-before">БЫЛО</button>
             <div class="slider__input">
               <div class="pseudo-range">
                 <div class="pseudo-range__button"></div>
               </div>
               <input value="50" class="slider__range js-slider__range" oninput="changeSliderValue()" type="range">
             </div>
-
-            <style>
-              .pseudo-range{
-                height: 4px;
-                position: relative;
-                background-color:black;
-                pointer-events: none;
-              }
-              .pseudo-range__button{
-                width: 20px;
-                height: 20px;
-                background-color:black;
-                position: absolute;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                left: var(--slider-value, 50%);
-              }
-              .slider__range{
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                transform: translateY(-50%);
-                opacity: 0;
-              }
-              .slider__input{
-                position: relative;
-            
-
-              }
-            </style>
-            <button type="submit" class="slider__after js-after">СТАЛО</button>
-            <div class="slider__item">
-              <picture>
-                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
-                <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="slider__img">
-              </picture> 
-            </div>
-            <div class="slider__item">
-              <picture>
-                <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
-                <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="slider__img">
-              </picture> 
-            </div>
+            <button type="submit" class="slider__after-btn btn js-after">СТАЛО</button>
+          </div>
+          <div class="slider__item">
+            <picture>
+              <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-fat-tablet-1x.png, img/example/cat-fat-tablet-2x.png 2x">
+              <img srcset="img/example/cat-fat-mobile-1x.png, img/example/cat-fat-mobile-2x.png 2x" src="img/example/cat-fat-mobile-2x.png" alt="cat-slider__img" class="slider__img">
+            </picture> 
+          </div>
+          <div class="slider__item">
+            <picture>
+              <source media="(min-width: 768px)" type="image/png" srcset="img/example/cat-skinny-tablet-1x.png, img/example/cat-skinny-tablet-2x.png 2x">
+              <img srcset="img/example/cat-skinny-mobile-1x.png, img/example/cat-skinny-mobile-2x.png 2x" src="img/example/cat-skinny-mobile-2x.png" alt="cat-slider__img" class="slider__img">
+            </picture> 
           </div>
         </div>
-      </div>    
+      </div>
     </section>
     <section class="map">
       <div class="map__desc-container container">
-          <div class="map__desc">ПРИГЛАШАЕМ <br>
-            К СОТРУДНИЧЕСТВУ 
+          <h6 class="map__title">ПРИГЛАШАЕМ <br>
+            К СОТРУДНИЧЕСТВУ <br>
             ДИЛЕРОВ!
-          </div>
+          </h6>
           <div class="map__contanct">
-            <div class="map__adress">ул. Большая Конюшенная, д. 19/8</div>
+            <div class="map__adress">ул. Большая <br> Конюшенная, д. 19/8</div>
               <div class="map__city">Санкт-Петербург</div>
           </div>
       </div>
@@ -340,6 +289,7 @@
             <img class="map__logo" src="img/map/logo.svg" alt="logo">
           </picture> 
         </div>
+      </div>
     </section>
     <footer class="footer">
       <div class="footer__container container">
@@ -395,7 +345,6 @@
 
       const slider = document.querySelector(".js-slider");
       const sliderRange = document.querySelector(".js-slider__range");
-
       const button1 = document.querySelector(".js-before");
       const button2 = document.querySelector(".js-after");
 
@@ -411,6 +360,7 @@
 
       clickButton(button1, '0');
       clickButton(button2, '100');
+
     </script>
   </body>
 </html>
