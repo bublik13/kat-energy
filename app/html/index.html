@@ -349,18 +349,30 @@
       const button2 = document.querySelector(".js-after");
 
       function changeSliderValue() {
-      slider.style.setProperty("--slider-value", sliderRange.value + "%");
-     }
+        let btn = document.querySelector('.pseudo-range__button');
+
+        slider.style.setProperty("--slider-value", sliderRange.value + "%");
+
+        let btnW = btn.getBoundingClientRect().width;
+        let btnParW = btn.parentElement.getBoundingClientRect().width;
+
+        btn.style.left = "calc(" + sliderRange.value / ((btnW*100/btnParW) / (100-(btnW*100/btnParW)) + 1) + "% )";
+        btn.style.transform = "translate(0%, -50%)";
+       }
+
       function clickButton(clickBtn, value) {
         clickBtn.addEventListener('click', ()=>{
-        sliderRange.value = value;
-        slider.style.setProperty("--slider-value", value + "%");
+          let btn = document.querySelector('.pseudo-range__button');
+
+          sliderRange.value = value;
+          slider.style.setProperty("--slider-value", value + "%");
+          btn.style.transform = "translate(0%, -50%)";
+          if(value == 100) btn.style.left = "calc(100% - " + btn.getBoundingClientRect().width + "px)";
+          else btn.style.left = '0px';
         })
       }
-
       clickButton(button1, '0');
       clickButton(button2, '100');
-
     </script>
   </body>
 </html>
