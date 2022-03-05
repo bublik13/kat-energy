@@ -23,17 +23,20 @@ $example-bg-pink: #eaeaea;
 $example-bg-white: #ffffff;
 $slaider-bg-white: #ffffff;
 $slaider-bg-pink: #eaeaea;
-$progress-bg-white: #ffffff;
-$progress-bg-green: #68b738;
-$progress-bg-pink: #dcdcdc;
+$pseudo-range-bg-white: #ffffff;
+$pseudo-range-bg-green: #68b738;
+$pseudo-range-bg-pink: #dcdcdc;
+$map-bg-white: #ffffff;
+$footer-bg-pink: #f2f2f2;
 
 //border
 $nav-border: #e6e6e6;
 $link-border: #d9d9d9;
 $example-border: #cdcdcd;
-$progress-border-pink: #cdcdcd;
-$progress-border: rgba(0, 0, 0, 0.4);
+$pseudo-range-border-pink: #cdcdcd;
+$slider-border: rgba(0, 0, 0, 0.4);
 $description-border: #e6e6e6;
+$footer-border: #D9D9D9;
 
 //box-shadow
 $box-shadow-black: rgba(0, 0, 0, 0.16);
@@ -61,6 +64,12 @@ $link-color-black: #000000;
 $example-color-black: #000000;
 $example-color-grey: #444444;
 $progress-color-black: #000000;
+$map-color-dark-grey: #444444;
+$map-color-black: #111111;
+$footer-color-grey: #666666;
+$footer-color-dark-grey: #444444;
+$footer-color-green: #68B738;
+$slider-color-black: #000000;
 
 //media
 $xs: 350px;

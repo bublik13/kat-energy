@@ -1,0 +1,103 @@
+.map {
+  @include media($lg) {
+    position: relative;
+  }
+}
+.map__desc-container {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $map-bg-white;
+  @include media($md) {
+    padding: 57px 70px 62px;
+  }
+  @include media($lg) {
+    position: absolute;
+    z-index: 3;
+    top: 95px;
+    left: 111px;
+    padding-left: 79px;
+    padding-right: 82px;
+  }
+}
+.map__title {
+  max-width: 140px;
+  @include font(16px, 20px, 400, $second-family);
+  color: $map-color-black;
+  @include media($md) {
+    margin-top: 1px;
+    max-width: 172px;
+    @include font(20px, 26px, 400, $second-family);
+  }
+  @include media($lg) {
+    max-width: 300px;
+    margin-right: 95px;
+  }
+}
+.map__adress {
+  max-width: 139px;
+  @include font(14px, 20px, 400, $arial-family);
+  color: $map-color-dark-grey;
+  text-align: start;
+  @include media($md) {
+    text-align: end;
+    max-width: 160px;
+    @include font(16px, 20px, 400, $arial-family);
+    margin-bottom: 18px;
+  }
+  @include media($lg) {
+    max-width: 222px;
+    text-align: start;
+  }
+}
+.map__city {
+  @include font(14px, 20px, 400, $arial-family);
+  color: $map-color-dark-grey;
+  text-align: start;
+  @include media($md) {
+    text-align: end;
+    @include font(16px, 20px, 400, $arial-family);
+  }
+  @include media($lg) {
+    text-align: start;
+  }
+}
+.map__container {
+  padding: 0;
+  position: relative;
+}
+.map__wrap {
+  position: relative;
+}
+.map__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  @include media($md) {
+    height: 100%;
+  }
+}
+.map__point {
+  width: 57px;
+  height: 53px;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  bottom: 28px;
+  left: 6px;
+  margin: auto;
+  @include media($md) {
+    width: 113px;
+    height: 106px;
+    bottom: 0;
+    left: 10px;
+  }
+  @include media($lg) {
+    transform: translate(212%, -15%);
+  }
+}
+.map__logo {
+  width: 100%;
+  display: block;
+}

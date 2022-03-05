@@ -1,0 +1,20 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  transition: ease-out 0.2s;
+  color: $slider-color-black;
+  background-color: transparent;
+  @include font(16px, 20px, 400, $second-family);
+  @include media($md) {
+    @include font(20px, 30px, 400, $second-family);
+    border-bottom: 1px dashed $slider-border;
+    &:hover {
+      border-bottom: 1px solid $slider-border;
+    }
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}

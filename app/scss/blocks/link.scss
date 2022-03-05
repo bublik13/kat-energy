@@ -2,16 +2,9 @@
   display: flex;
   align-items: center;
   padding-top: 18px;
-  padding-bottom: 22px;
   border-top: 1px solid $link-border;
   @include media($md) {
     border-top: 1px solid transparent;
-    padding-top: 51px;
-    padding-bottom: 57px;
-  }
-  @include media($lg) {
-    padding-top: 25px;
-    padding-bottom: 59px;
   }
 }
 .link__name {
